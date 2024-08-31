@@ -6,4 +6,4 @@ const MESES_NOMBRES = [
 ];
 const NOMBRE_MES = MESES_NOMBRES[MES];
 
-console.log(`El mes actual es ${NOMBRE_MES}`);
+console.log(`El mes actual es ${NOMBRE_MES}.`);

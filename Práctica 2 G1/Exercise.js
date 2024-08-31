@@ -3,7 +3,7 @@ const DIA = FECHA_ACTUAL.getDate();
 const MES = FECHA_ACTUAL.getMonth() + 1; //Sumamos 1 para que el mes esté en el rango 1-12
 const AÑO = FECHA_ACTUAL.getFullYear();
 
-console.log(`Fecha actual: ${DIA}/${MES}/${AÑO}\n`);
+console.log(`Fecha actual: ${DIA}/${MES}/${AÑO}.\n`);
 
 //FORMATEO
 
@@ -16,4 +16,4 @@ const MESES_NOMBRES = [
 ];
 const NOMBRE_MES = MESES_NOMBRES[MES - 1];//Restamos 1 porque anteriormente le sumamos 1 para dar una equivalencia correcta del mes
 
-console.log(`Fecha actual: ${DIA} ${NOMBRE_DIA}, ${NOMBRE_MES} del ${AÑO}`);
+console.log(`Fecha actual: ${NOMBRE_DIA}, ${DIA} de ${NOMBRE_MES} del ${AÑO}.`);
