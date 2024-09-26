@@ -1,10 +1,17 @@
+const { error } = require('console');
 const READLINE = require('readline');
 const RL = READLINE.createInterface({
     input: process.stdin,
     output: process.stdout
 });
 
-RL.question('¿Qué edad tiene?\n', (edad) => {
+RL.question('¿Qué edad tiene?\n', (n) => {
+    edad = parseInt(n);
+    if (isNaN(edad)){
+        console.error(`Ingrese un número valido no '${n}'.`);
+        RL.close();
+        return;
+    }
     let sp = "";
     if(edad >= 60){
         sp = "Adulto Mayor";

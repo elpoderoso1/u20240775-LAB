@@ -5,10 +5,14 @@ const RL = READLINE.createInterface({
 });
 
 function Ask() {
-    RL.question('Ingrese un número del 1 al 12.\n(0 Para salir del programa)\n', (n) => {
+    RL.question('Ingrese un número del 1 al 12.\n(0 Para salir del programa)\n', (m) => {
         let nombreMes = "";
-        n = parseInt(n);
-        switch (n) {
+        n = parseInt(m);
+        if (isNaN(n)){
+            console.error(`Ingrese un número valido no '${m}'.`);
+            return Ask();
+        }
+        switch (n){
             case 0:
                 break;
             case 1:
